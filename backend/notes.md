@@ -12,3 +12,7 @@ PATCH /workouts/:id     --> Updates a single workout
 Mongoose is an ODM (Object Data Modelling) library. It wraps mongodb with an extra layer which allows us to use methods to read and write database documents. It also gives us a way to declare models and schemas to ensure a more strict data structure. For example you can make a schema for a blog document which says every blog must have a title, body and all the other properties and it must all be strings as well. Mongoose will also be used to connect to the database inside server.js.
 
 A model will apply a schema for a particular model and then we use the model to interact with a collection of that name. Such as we use Workout model to interact with the Workouts collection. Example: Workout.find() will find all of the workouts within the Workouts collection.
+
+We will only keep files under routes folder to register different routes (we dont want to add database logic there)
+
+Instead we will keep files under controllers folder with different control functions so that these functions can be called inside the router files.
